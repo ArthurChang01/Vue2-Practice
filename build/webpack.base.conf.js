@@ -67,11 +67,11 @@ var config = {
         test: /\.css/,
         exclude: /^node_modules$/,
         loader: `style-loader!css-loader!autoprefixer-loader?{ browsers: ['last 100 versions'] }!`
-      },
+      },      
       {
-        test: /\.scss$/,
+        test: /\.s[a|c]ss$/,
         exclude: /^node_modules$/,
-        loader: `style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap`
+        loader: `'style!css!sass?sourceMap`
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
