@@ -7,21 +7,21 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                <Link class="navbar-brand" to="/">應用程式名稱</Link>
+                <router-link class="navbar-brand" to="/">應用程式名稱</router-link>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <Link to="/">首頁</Link>
+                        <router-link to="/">首頁</router-link>
                     </li>
                     <li>
-                        <Link to="/about">關於</Link>
+                        <router-link to="/about">關於</router-link>
                     </li>
                     <li>
-                        <Link to="/contact">連絡方式</Link>
+                        <router-link to="/contact">連絡方式</router-link>
                     </li>
                 </ul>
-                <v-loginStateComponent isAuth={this.props.isAuth} name={this.props.name} LogOut={this.props.LogOut} />
+                <LoginStateComponent isAuth={isAuth} name={name} LogOut={this.props.LogOut} />
             </div>
         </div>
     </div>

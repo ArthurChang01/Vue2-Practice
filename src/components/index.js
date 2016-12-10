@@ -6,9 +6,8 @@ import HeaderComponent from './layout/HeaderComponent';
 import LoginComponent from './login/LoginComponent.vue';
 import LoginStateComponent from './login/LoginStateComponent';
 import RegisterComponent from './login/RegisterComponent';
-import Hello from './Hello';
 
-export default {
+module.exports = {
     AboutComponent,
     ContactComponent,
     HomeComponent,
@@ -16,6 +15,5 @@ export default {
     HeaderComponent,
     LoginComponent,
     LoginStateComponent,
-    RegisterComponent,
-    Hello
+    RegisterComponent
 }
