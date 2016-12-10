@@ -1,16 +1,16 @@
 <template>
-    <div className="navbar navbar-inverse navbar-fixed-top">
-        <div className="container">
-            <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                <Link className="navbar-brand" to="/">應用程式名稱</Link>
+                <Link class="navbar-brand" to="/">應用程式名稱</Link>
             </div>
-            <div className="navbar-collapse collapse">
-                <ul className="nav navbar-nav">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
                     <li>
                         <Link to="/">首頁</Link>
                     </li>
