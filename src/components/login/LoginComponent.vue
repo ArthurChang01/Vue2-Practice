@@ -10,13 +10,13 @@
                         <div class="form-group">
                             <label for="email" class="col-md-2 control-label">電子郵件</label>
                             <div class="col-md-10">
-                                <input type="email" name="email" class="form-control" ref="email" />
+                                <input type="email" name="email" class="form-control" v-model="form.name" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">密碼</label>
                             <div class="col-md-10">
-                                <input type="password" name="password" class="form-control" ref="password" />
+                                <input type="password" name="password" class="form-control" v-model="form.password" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="登入" disabled={this.props.isFetching} class="btn btn-default" />
+                                <input type="submit" value="登入" :disabled="hasCompleted" class="btn btn-default" />
                             </div>
                         </div>
                         <p>
@@ -43,7 +43,32 @@
     </div>
 </template>
 <script>
-    export default {
+    import { mapActions } from 'vuex'
+    import { USER_SIGNIN } from '../../store/user'
 
+    export default {
+        data() {
+			return {
+				btn: false, //true 已经提交过， false没有提交过
+				form: {
+					name: '',
+					password: ''
+				}
+			}
+		},
+        computed:{
+            hasCompleted:function(){
+                return !this.form.name && !this.form.password
+            }
+        },
+		methods: {
+            ...mapActions([USER_SIGNIN]),
+			submit() {
+				this.btn = true
+				if(!this.form.id || !this.form.name) return
+				this.USER_SIGNIN(this.form)
+				this.$router.replace({ path: '/home' })
+			}
+		}
     }
 </script>
