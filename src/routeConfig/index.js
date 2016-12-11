@@ -6,28 +6,33 @@ module.exports =[
         path: '/',
         component: App,
         children: [
-            {
-                path: '/login', //登录
-                meta: { auth: false },
+            {   //登入
+                name:'Login',
+                path: '/login', 
                 component: LoginComponent
             },
             {
-                path: '/register', //註冊
+                //註冊
+                name:'Register',
+                path: '/register', 
                 component: RegisterComponent
             },
             {
-                path: '/', //首页
-                meta: { auth: false },
+                //首頁
+                name:'Home',
+                path: '/', 
                 component: HomeComponent
             },
             {
-                path: '/about', //關於
-                meta: { auth: false },
+                //關於
+                name: 'About',
+                path: '/about',
                 component: AboutComponent
             },
             {
-                path: '/contact', //聯絡
-                meta: { auth: false },
+                //聯繫
+                name: 'Contact',
+                path: '/contact',
                 component: ContactComponent
             },
             {

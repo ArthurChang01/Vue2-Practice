@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="jumbotron">
+        <div class="jumbotron" style="padding-left:20px;"> 
             <h1>ASP.NET 213</h1>
             <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
             <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo; </a></p>
@@ -31,6 +31,6 @@
 </template>
 <script>
     export default {
-
+        name:'Home'
     }
 </script>
