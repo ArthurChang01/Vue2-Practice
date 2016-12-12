@@ -18,7 +18,7 @@
 </template>
 <script>
     import { mapState, mapActions } from 'vuex'
-    import { USER_SIGNOUT } from '../../store/user'
+    import { USER_SIGNOUT,USER_SIGIN } from '../../store/user'
 
     export default {
         name:'LoginState',
@@ -26,7 +26,7 @@
             this.$store.subscribe((mutation, state) => {
                 this.user.name=state.user.name;
                 this.user.password=state.user.password;
-
+                console.log(state)        
             })
         },
         data(){
