@@ -9,19 +9,25 @@ export const USER_SIGNOUT = 'USER_SIGNOUT' //退出登录
 export const USER_REGISTER = 'USER_REGISTER' //退出登录
 
 export default {
-    state: {},
+    state: {name:'', password:''},
     mutations: {
         [USER_SIGNIN](state, {payload, meta}) {
             if (meta && meta.promise === SUCCESS)
-                Object.assign(state, payload[0])
+                {
+                    state.name=payload[0].name;
+                    state.password=payload[0].password
+                }    
         },
         [USER_REGISTER](state, {payload, meta}) {
             if (meta && meta.promise === SUCCESS)
-                Object.assign(state, payload)
+                {
+                    state.name=payload.name;
+                    state.password=payload.password
+                }
         },
         [USER_SIGNOUT](state) {
-            sessionStorage.removeItem('user')
-            Object.keys(state).forEach(k => Vue.delete(state, k))
+            state.name='';
+            state.password='';
         }
     },
     actions: {

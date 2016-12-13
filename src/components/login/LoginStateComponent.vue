@@ -22,18 +22,9 @@
 
     export default {
         name:'LoginState',
-        created:function(){
-            this.$store.subscribe((mutation, state) => {
-                this.user.name=state.user.name;
-                this.user.password=state.user.password;
-                console.log(state)        
-            })
-        },
-        data(){
-            return {
-                user:{name:'',password:''}
-            };
-        },
+        computed: mapState({ 
+			user: state => state.user 
+        }),
         methods: {
             ...mapActions([USER_SIGNOUT]),
             logout() {

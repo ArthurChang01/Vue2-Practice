@@ -7,7 +7,7 @@ import {PENDING, SUCCESS, FAILURE, FINALLY} from '../common/constant'
 
 Vue.use(Vuex)
 
-var __DEV__=false;
+var __DEV__=true;
 
 export default new Vuex.Store({
     //strict: process.env.NODE_ENV !== 'production', //在非生产环境下，使用严格模式
