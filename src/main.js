@@ -1,3 +1,5 @@
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
 import 'babel-polyfill'
 
 import Vue from 'vue'
